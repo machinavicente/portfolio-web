@@ -2,7 +2,7 @@
 
 Bienvenido al repositorio de mi portafolio personal. Este proyecto ha sido diseñado y desarrollado bajo una arquitectura moderna **Full-Stack**, enfocada en el rendimiento, la estética neumórfica y la escalabilidad.
 
-![Preview del Proyecto](https://via.placeholder.com/800x400?text=Preview+de+Machina+Portfolio) ## 🛠️ Stack Tecnológico
+![Preview del Proyecto](https://github.com/machinavicente/portfolio-web/releases/download/Relese/image.png) ## 🛠️ Stack Tecnológico
 
 Este portafolio utiliza las herramientas más actuales del ecosistema web para garantizar una experiencia de usuario fluida y un código mantenible:
 
