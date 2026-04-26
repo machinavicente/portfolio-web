@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#212428] text-[#c4cfde] antialiased font-sans;
+  }
+}
+
+@layer components {
+  /* La tarjeta neumórfica clásica de Inbio */
+  .inbio-card {
+    @apply bg-gradient-to-br from-[#23272b] to-[#1e2125] shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] 
+           rounded-3xl p-8 transition-all duration-300 border-none;
+  }
+  
+  .inbio-card:hover {
+    @apply bg-gradient-to-br from-[#1e2125] to-[#23272b] -translate-y-2;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  }
+
+  .inbio-btn {
+    @apply inbio-card flex items-center justify-center p-4 rounded-xl text-[#ff014f] hover:text-white;
+  }
+
+  .text-accent {
+    @apply text-[#ff014f];
+  }
+
+  .title-main {
+    @apply text-white font-bold tracking-tight;
+  }
+  .inbio-input{
+    background-color: #191b1e;
+    box-shadow: inset 8px 8px 16px #15171a, inset -8px -8px 16px #1d1f22;
+    outline: none
+  
+  }
+}
+
