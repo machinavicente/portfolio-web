@@ -1,75 +1,30 @@
-# Nuxt Minimal Starter
+# 🚀 Vicente Machina | Portfolio Profesional
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Bienvenido al repositorio de mi portafolio personal. Este proyecto ha sido diseñado y desarrollado bajo una arquitectura moderna **Full-Stack**, enfocada en el rendimiento, la estética neumórfica y la escalabilidad.
 
-## Setup
+![Preview del Proyecto](https://via.placeholder.com/800x400?text=Preview+de+Machina+Portfolio) ## 🛠️ Stack Tecnológico
 
-Make sure to install dependencies:
+Este portafolio utiliza las herramientas más actuales del ecosistema web para garantizar una experiencia de usuario fluida y un código mantenible:
 
-```bash
-# npm
-npm install
+* **Frontend:** [Nuxt 3](https://nuxt.com/) (Vue.js 3) - Aprovechando el renderizado híbrido y la optimización de rutas.
+* **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Implementación de diseño **Dark Mode** con efectos de **Neumorfismo** y **Glassmorphism**.
+* **Iconografía:** [Remix Icon](https://remixicon.com/) para una línea visual limpia y profesional.
+* **Backend & API:** Integración de **EmailJS** para la gestión asíncrona de formularios de contacto sin necesidad de servidor dedicado.
+* **Tipografía:** Inter & Montserrat para una lectura técnica clara.
 
-# pnpm
-pnpm install
+## 🌟 Características Principales
 
-# yarn
-yarn install
+* **Diseño Responsivo:** Adaptado completamente a dispositivos móviles, tablets y escritorio.
+* **Interfaz Neumórfica:** Uso avanzado de sombras (`inset` y `drop-shadow`) para crear una profundidad táctil visual.
+* **Formulario de Contacto Funcional:** Validación de datos en tiempo real y envío de correos directo a bandeja de entrada.
+* **Optimización de Carga:** Uso de imágenes optimizadas y carga diferida de componentes.
 
-# bun
-bun install
-```
+## 📂 Estructura del Proyecto
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+```text
+├── assets/          # Estilos globales (CSS) y recursos estáticos
+├── components/      # Componentes de Vue reutilizables (Nav, Footer, Cards)
+├── pages/           # Vistas principales del portafolio
+├── public/          # Favicon y archivos públicos
+├── server/          # Lógica opcional del servidor (Nitro)
+└── nuxt.config.ts   # Configuración central del framework
