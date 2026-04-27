@@ -3,6 +3,7 @@
     <Navbar />
     <main class="container mx-auto px-6 md:px-16 pt-32 space-y-32">
       <Hero />
+      <Skills />
       <Features />
       <Projects />
       <Contact />

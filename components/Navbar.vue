@@ -6,7 +6,7 @@
         Vicente<span class="text-accent text-shadow-glow"> Machina</span>
       </div>
 
-      <div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.15em]">
+      <div class="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.15em]">
         <a v-for="link in navLinks" :key="link.href" :href="link.href" 
            class="text-gray-400 hover:text-white transition-colors relative group">
           {{ link.text }}
@@ -49,20 +49,20 @@
              class="mt-4 px-6 py-4 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-all">
             Hablemos
           </a>
+        </div>
 
-          <div class="mt-6 pt-6 border-t border-white/5">
-            <p class="uppercase text-[9px] tracking-[0.2em] mb-4 text-gray-500">Conectar</p>
-            <div class="flex gap-3 justify-start flex-wrap">
-              <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn" aria-label="GitHub">
-                <i class="ri-github-fill"></i>
-              </a>
-              <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn" aria-label="Instagram">
-                <i class="ri-instagram-line"></i>
-              </a>
-              <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
-                <i class="ri-linkedin-fill"></i>
-              </a>
-            </div>
+        <div class="mb-6 pt-6 border-t border-white/5">
+          <p class="uppercase text-[9px] tracking-[0.2em] mb-4 text-gray-500">Conectar</p>
+          <div class="flex gap-3 justify-start flex-wrap">
+            <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn" aria-label="GitHub">
+              <i class="ri-github-fill"></i>
+            </a>
+            <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
+              <i class="ri-linkedin-fill"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -81,9 +81,12 @@
 import { ref } from 'vue'
 
 const isOpen = ref(false)
+
+// Agregada la sección de Tecnologías (Tech Stack)
 const navLinks = [
   { text: 'Inicio', href: '#inicio' },
   { text: 'Servicios', href: '#servicios' },
+  { text: 'Tecnologías', href: '#skills' }, // Nueva sección
   { text: 'Portafolio', href: '#portafolio' }
 ]
 
@@ -100,10 +103,9 @@ const closeMenu = () => {
 
 <style scoped>
 .mobile-social-btn {
-  /* Tamaño reducido de 48px a 40px para evitar desbordamiento */
   @apply w-10 h-10 rounded-lg bg-[#212428] shadow-[4px_4px_8px_#141619,-4px_-4px_8px_#2e3237] 
          flex items-center justify-center text-lg text-gray-400 transition-all 
-         active:scale-90 active:shadow-inner;
+         active:scale-90 active:shadow-inner hover:text-accent;
 }
 
 .text-shadow-glow {
