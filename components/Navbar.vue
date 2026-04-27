@@ -49,20 +49,20 @@
              class="mt-4 px-6 py-4 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-all">
             Hablemos
           </a>
-        </div>
-        
-        <div class="mt-auto pt-6 border-t border-white/5">
-          <p class="uppercase text-[9px] tracking-[0.2em] mb-4 text-gray-500">Conectar</p>
-          <div class="flex gap-3 justify-start">
-            <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn" aria-label="GitHub">
-              <i class="ri-github-fill"></i>
-            </a>
-            <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn" aria-label="Instagram">
-              <i class="ri-instagram-line"></i>
-            </a>
-            <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
-              <i class="ri-linkedin-fill"></i>
-            </a>
+
+          <div class="mt-6 pt-6 border-t border-white/5">
+            <p class="uppercase text-[9px] tracking-[0.2em] mb-4 text-gray-500">Conectar</p>
+            <div class="flex gap-3 justify-start flex-wrap">
+              <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn" aria-label="GitHub">
+                <i class="ri-github-fill"></i>
+              </a>
+              <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn" aria-label="Instagram">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
