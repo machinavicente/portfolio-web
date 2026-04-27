@@ -29,37 +29,38 @@
       </button>
 
       <div :class="[
-        'fixed top-0 right-0 h-screen w-[80%] bg-[#1c1e22] shadow-2xl z-[105] p-10 transform transition-transform duration-500 ease-in-out md:hidden',
+        'fixed top-0 right-0 h-screen w-[85%] sm:w-[70%] bg-[#1c1e22] shadow-2xl z-[105] p-8 transform transition-transform duration-500 ease-in-out md:hidden flex flex-col',
         isOpen ? 'translate-x-0' : 'translate-x-full'
       ]">
-        <div class="flex flex-col gap-6 mt-16">
-          <div class="pb-6 border-b border-white/5 mb-4">
-             <span class="text-accent text-xs tracking-widest uppercase">Navegación</span>
+        
+        <div class="flex flex-col gap-5 mt-20">
+          <div class="pb-4 border-b border-white/5 mb-2">
+             <span class="text-accent text-xs tracking-widest uppercase font-bold">Navegación</span>
           </div>
           
           <a v-for="link in navLinks" :key="link.href" :href="link.href" 
              @click="closeMenu"
-             class="text-lg font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all flex justify-between items-center group">
+             class="text-base font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all flex justify-between items-center group py-2">
             {{ link.text }}
-            <i class="ri-arrow-right-s-line text-accent opacity-0 group-hover:opacity-100 transition-all"></i>
+            <i class="ri-arrow-right-s-line text-accent"></i>
           </a>
 
           <a href="#contacto" @click="closeMenu"
-             class="mt-8 px-7 py-4 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all">
+             class="mt-4 px-7 py-4 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-all">
             Hablemos
           </a>
         </div>
         
-        <div class="absolute bottom-10 left-5 right-5 max-w-full">
+        <div class="mt-auto mb-10">
           <p class="uppercase text-[10px] tracking-[0.2em] mb-6 text-gray-500 border-b border-white/5 pb-2">Redes Profesionales</p>
-          <div class="flex flex-wrap justify-between gap-3">
-            <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn">
+          <div class="flex gap-4 justify-start">
+            <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn" aria-label="GitHub">
               <i class="ri-github-fill"></i>
             </a>
-            <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn">
+            <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn" aria-label="Instagram">
               <i class="ri-instagram-line"></i>
             </a>
-            <a href="#" class="mobile-social-btn">
+            <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
               <i class="ri-linkedin-fill"></i>
             </a>
           </div>
@@ -69,7 +70,7 @@
       <div 
         v-if="isOpen" 
         @click="closeMenu" 
-        class="fixed inset-0 bg-[#000]/70 backdrop-blur-sm z-[101] md:hidden transition-opacity duration-300"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[101] md:hidden transition-opacity duration-300"
       ></div>
 
     </div>
@@ -79,25 +80,17 @@
 <script setup>
 import { ref } from 'vue'
 
-// Estado para controlar el menú móvil
 const isOpen = ref(false)
 
-// Links de navegación centralizados
 const navLinks = [
   { text: 'Inicio', href: '#inicio' },
   { text: 'Servicios', href: '#servicios' },
   { text: 'Portafolio', href: '#portafolio' }
 ]
 
-// Funciones de control
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
-  // Bloquear el scroll del body cuando el menú está abierto
-  if (isOpen.value) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'auto'
-  }
+  document.body.style.overflow = isOpen.value ? 'hidden' : 'auto'
 }
 
 const closeMenu = () => {
@@ -107,14 +100,19 @@ const closeMenu = () => {
 </script>
 
 <style scoped>
-/* Botones de redes sociales específicos para el móvil con estilo neumórfico suave */
 .mobile-social-btn {
-  @apply w-11 h-11 rounded-lg bg-[#212428] shadow-[5px_5px_10px_#141619,-5px_-5px_-10px_#2e3237] 
-         flex items-center justify-center text-lg text-gray-400 transition-all 
+  @apply w-12 h-12 rounded-xl bg-[#212428] shadow-[5px_5px_10px_#141619,-5px_-5px_10px_#2e3237] 
+         flex items-center justify-center text-xl text-gray-400 transition-all 
+         active:scale-90 active:shadow-inner hover:text-accent;
 }
 
-/* Animación de brillo para el texto accent (opcional) */
 .text-shadow-glow {
   text-shadow: 0 0 15px rgba(255, 1, 79, 0.3);
+}
+
+/* Animación para el botón de Hablemos en el nav */
+.inbio-btn-nav {
+  background: linear-gradient(145deg, #1e2024, #23272b);
+  box-shadow: 5px 5px 10px #1c1e22, -5px -5px 10px #262a2e;
 }
 </style>
