@@ -50,9 +50,9 @@
           </a>
         </div>
         
-        <div class="absolute bottom-10 left-10 right-10">
+        <div class="absolute bottom-10 left-5 right-5 max-w-full">
           <p class="uppercase text-[10px] tracking-[0.2em] mb-6 text-gray-500 border-b border-white/5 pb-2">Redes Profesionales</p>
-          <div class="flex gap-5">
+          <div class="flex flex-wrap justify-between gap-3">
             <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn">
               <i class="ri-github-fill"></i>
             </a>
@@ -109,9 +109,8 @@ const closeMenu = () => {
 <style scoped>
 /* Botones de redes sociales específicos para el móvil con estilo neumórfico suave */
 .mobile-social-btn {
-  @apply w-12 h-12 rounded-lg bg-[#212428] shadow-[5px_5px_10px_#141619,-5px_-5px_10px_#2e3237] 
-         flex items-center justify-center text-xl text-gray-400 transition-all 
-         hover:-translate-y-1 hover:text-accent active:shadow-inner;
+  @apply w-11 h-11 rounded-lg bg-[#212428] shadow-[5px_5px_10px_#141619,-5px_-5px_-10px_#2e3237] 
+         flex items-center justify-center text-lg text-gray-400 transition-all 
 }
 
 /* Animación de brillo para el texto accent (opcional) */
