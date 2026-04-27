@@ -27,43 +27,34 @@
       </button>
 
       <div :class="[
-        'fixed top-0 right-0 h-screen w-[80%] sm:w-[65%] bg-[#1c1e22] shadow-2xl z-[105] p-6 transform transition-transform duration-500 ease-in-out md:hidden flex flex-col',
+        'fixed top-0 right-0 h-screen w-[80%] sm:w-[65%] bg-[#1c1e22] shadow-2xl z-[105] p-8 transform transition-transform duration-500 ease-in-out md:hidden flex flex-col',
         isOpen ? 'translate-x-0' : 'translate-x-full'
       ]">
         
-        <div class="flex flex-col gap-4 mt-16 overflow-y-auto">
-          <div class="pb-3 border-b border-white/5 mb-2">
-             <span class="text-accent text-[10px] tracking-widest uppercase font-bold">Menú</span>
+        <div class="flex flex-col gap-6 mt-16">
+          <div class="pb-4 border-b border-white/5 mb-2">
+             <span class="text-accent text-[10px] tracking-widest uppercase font-bold">Navegación</span>
           </div>
           
           <nav class="flex flex-col">
             <a v-for="link in navLinks" :key="link.href" :href="link.href" 
                @click="closeMenu"
-               class="text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all flex justify-between items-center py-4 border-b border-white/5 last:border-0">
+               class="text-lg font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all flex justify-between items-center py-5 border-b border-white/5 last:border-0 group">
               {{ link.text }}
-              <i class="ri-arrow-right-s-line text-accent/50 text-xl"></i>
+              <i class="ri-arrow-right-s-line text-accent opacity-0 group-hover:opacity-100 transition-all text-2xl"></i>
             </a>
           </nav>
 
           <a href="#contacto" @click="closeMenu"
-             class="mt-4 px-6 py-4 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest text-xs shadow-lg active:scale-95 transition-all">
-            Hablemos
+             class="mt-8 px-6 py-5 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-all">
+            Hablemos ahora
           </a>
         </div>
 
-        <div class="mt-auto pt-6 border-t border-white/5 w-full">
-          <p class="uppercase text-[9px] tracking-[0.2em] mb-4 text-gray-500">Conectar</p>
-          <div class="flex flex-wrap gap-4 justify-start items-center overflow-hidden">
-            <a href="https://github.com/machinavicente" target="_blank" class="mobile-social-btn" aria-label="GitHub">
-              <i class="ri-github-fill"></i>
-            </a>
-            <a href="https://instagram.com/machinav.dev" target="_blank" class="mobile-social-btn" aria-label="Instagram">
-              <i class="ri-instagram-line"></i>
-            </a>
-            <a href="#" class="mobile-social-btn" aria-label="LinkedIn">
-              <i class="ri-linkedin-fill"></i>
-            </a>
-          </div>
+        <div class="mt-auto pb-6 text-center">
+          <p class="text-[9px] uppercase tracking-[0.2em] text-gray-600 italic">
+            &copy; 2026 Vicente Machina
+          </p>
         </div>
       </div>
 
@@ -82,7 +73,6 @@ import { ref } from 'vue'
 
 const isOpen = ref(false)
 
-// Configuración de los enlaces incluyendo la nueva sección de Tecnologías
 const navLinks = [
   { text: 'Inicio', href: '#inicio' },
   { text: 'Servicios', href: '#servicios' },
@@ -92,7 +82,6 @@ const navLinks = [
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
-  // Bloquear scroll cuando el menú está abierto
   document.body.style.overflow = isOpen.value ? 'hidden' : 'auto'
 }
 
@@ -103,13 +92,6 @@ const closeMenu = () => {
 </script>
 
 <style scoped>
-/* Botones sociales con soporte para pantallas pequeñas */
-.mobile-social-btn {
-  @apply w-11 h-11 min-w-[44px] rounded-lg bg-[#212428] shadow-[4px_4px_8px_#141619,-4px_-4px_8px_#2e3237] 
-         flex items-center justify-center text-xl text-gray-400 transition-all 
-         active:scale-90 active:shadow-inner hover:text-accent;
-}
-
 .text-shadow-glow {
   text-shadow: 0 0 15px rgba(255, 1, 79, 0.3);
 }
@@ -117,5 +99,10 @@ const closeMenu = () => {
 .inbio-btn-nav {
   background: linear-gradient(145deg, #1e2024, #23272b);
   box-shadow: 5px 5px 10px #1c1e22, -5px -5px 10px #262a2e;
+}
+
+/* Animación sutil para los links del móvil */
+nav a {
+  transition: all 0.3s ease;
 }
 </style>
