@@ -14,8 +14,8 @@ const skills = [
   <section id="skills" class="py-20 bg-[#212428]">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <p class="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4">Ecosistema Profesional</p>
-        <h2 class="text-4xl md:text-5xl title-main text-[#c4cfde] font-bold">Tecnologías de Dominio</h2>
+        <p class="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4">Stack Tecnológico</p>
+        <h2 class="text-4xl md:text-5xl title-main text-[#c4cfde] font-bold">Herramientas que domino</h2>
       </div>
 
       <div class="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">

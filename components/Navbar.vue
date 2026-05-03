@@ -14,14 +14,14 @@
         </a>
         
         <a href="#contacto" class="ml-4 px-7 py-3 rounded-lg text-accent inbio-btn-nav transition-all active:scale-95 shadow-lg font-bold uppercase tracking-widest text-[10px]">
-          Hablemos
+          Contactar
         </a>
       </div>
 
       <button 
         @click="toggleMenu" 
         class="md:hidden text-2xl text-accent focus:outline-none z-[110] p-2"
-        aria-label="Toggle Menu"
+        aria-label="Menú de navegación"
       >
         <i :class="isOpen ? 'ri-close-line' : 'ri-menu-3-line'"></i>
       </button>
@@ -32,9 +32,6 @@
       ]">
         
         <div class="flex flex-col gap-6 mt-16">
-          <div class="pb-4 border-b border-white/5 mb-2">
-             <span class="text-accent text-[10px] tracking-widest uppercase font-bold">Navegación</span>
-          </div>
           
           <nav class="flex flex-col">
             <a v-for="link in navLinks" :key="link.href" :href="link.href" 
@@ -47,7 +44,7 @@
 
           <a href="#contacto" @click="closeMenu"
              class="mt-8 px-6 py-5 rounded-lg text-accent inbio-btn-nav text-center font-bold uppercase tracking-widest text-sm shadow-lg active:scale-95 transition-all">
-            Hablemos ahora
+            Iniciar Conversación
           </a>
         </div>
 

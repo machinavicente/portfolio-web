@@ -5,7 +5,7 @@ const projects = [
     category: 'Full-Stack / Educación',
     image: 'https://github.com/machinavicente/portfolio-web/releases/download/Relese/Screenshot_2.png',
     link: 'https://machinalabfinder.vercel.app/',
-    description: 'Plataforma centralizada para simuladores de laboratorio. Optimización de recursos académicos.',
+    description: 'Plataforma centralizada para simuladores de laboratorio. Optimizo recursos académicos y facilito el acceso a herramientas educativas.',
     tags: ['Vue.js', 'Supabase', 'Bootstrap']
   }
 ]
@@ -14,8 +14,8 @@ const projects = [
 <template>
   <section id="portafolio" class="py-20">
     <div class="text-center mb-16">
-      <p class="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4">Portafolio</p>
-      <h2 class="text-4xl md:text-6xl title-main text-white font-bold">Mis Proyectos</h2>
+      <p class="text-accent uppercase tracking-[0.3em] text-xs font-bold mb-4">Trabajos Recientes</p>
+      <h2 class="text-4xl md:text-6xl title-main text-white font-bold">Proyectos Destacados</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -29,7 +29,7 @@ const projects = [
         <div class="relative overflow-hidden rounded-xl aspect-video mb-6 shadow-inner bg-[#1c1e22]">
           <img :src="proj.image" 
                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-               alt="Project Preview" />
+               alt="Vista previa del proyecto MachinaLab Finder" />
           
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
              <div class="w-14 h-14 bg-accent rounded-full flex items-center justify-center text-white text-2xl shadow-lg transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500">

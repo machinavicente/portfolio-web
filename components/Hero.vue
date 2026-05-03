@@ -1,20 +1,19 @@
 <template>
   <section id="inicio" class="grid md:grid-cols-2 gap-12 items-center min-h-[80vh] border-b border-black/30 pb-20">
     <div class="order-1 md:order-1">
-      <p class="uppercase tracking-[0.2em] text-sm mb-6">Bienvenido a mi mundo</p>
       <h1 class="text-5xl md:text-6xl title-main mb-6 leading-tight">
-        Soy <span class="text-accent">Vicente  Machina </span><br />
-        <span class="text-white">Ingeniero de Sistemas.</span>
+        Soy <span class="text-accent">Vicente Machina</span><br />
+        <span class="text-white">Ingeniero de Sistemas</span>
       </h1>
       <p class="text-lg leading-relaxed text-[#878e99] mb-12 max-w-xl">
-        Especializado en desarrollo Full-Stack y optimización de hardware.
-        Ingeniero dedicado a crear soluciones tecnológicas escalables,
-        modernas y eficientes.
+        Ingeniero especializado en desarrollo Full-Stack y optimización de hardware. 
+        Me dedico a construir soluciones tecnológicas escalables, modernas y eficientes 
+        que impulsan el éxito de cada proyecto.
       </p>
 
       <div class="flex flex-col md:flex-row gap-12">
         <div>
-          <p class="uppercase text-xs tracking-widest mb-6">Conéctate conmigo</p>
+          <p class="uppercase text-xs tracking-widest mb-6">Redes profesionales</p>
           <div class="flex gap-4">
             <a href="https://github.com/machinavicente" target="_blank" class="inbio-btn w-14 h-14 text-xl">
               <i class="ri-github-fill"></i>
