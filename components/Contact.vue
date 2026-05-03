@@ -159,7 +159,7 @@ const handleSubmit = async (event) => {
             </p>
             <p class="flex items-center gap-4 text-gray-300">
               <i class="ri-mail-send-line text-accent text-xl"></i>
-              <span>vicentemachina.dev@gmail.com</span>
+              <span class="break-all">vicentemachina.dev@gmail.com</span>
             </p>
           </div>
           
