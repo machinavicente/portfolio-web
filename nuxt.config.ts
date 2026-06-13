@@ -10,10 +10,10 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
-      title: 'Vicente Machina | Desarrollador Web & Móvil',
+      title: 'Machina Systems | IT Solutions & Digital Innovation',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Portafolio de desarrollador Full-Stack especializado en Vue.js, Nuxt, Flutter y Dart' }
+        { name: 'description', content: 'Machina Systems delivers innovative IT solutions including web development, mobile development, cloud computing, cybersecurity, and digital marketing.' }
       ],
       // Agregamos Remix Icon mediante CDN
       link: [

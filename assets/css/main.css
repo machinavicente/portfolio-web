@@ -4,38 +4,51 @@
 
 @layer base {
   body {
-    @apply bg-[#212428] text-[#c4cfde] antialiased font-sans;
+    @apply bg-machina-bg text-machina-text antialiased font-sans;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  /* La tarjeta neumórfica clásica de Inbio */
-  .inbio-card {
-    @apply bg-gradient-to-br from-[#23272b] to-[#1e2125] shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] 
-           rounded-3xl p-8 transition-all duration-300 border-none;
+  /* WAVENET-style glowing effects */
+  .glow-sphere {
+    @apply rounded-full blur-3xl pointer-events-none;
   }
   
-  .inbio-card:hover {
-    @apply bg-gradient-to-br from-[#1e2125] to-[#23272b] -translate-y-2;
-    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  .gradient-bg {
+    background: linear-gradient(135deg, #121212 0%, #1E1E1E 50%, #121212 100%);
   }
-
-  .inbio-btn {
-    @apply inbio-card flex items-center justify-center p-4 rounded-xl text-[#ff014f] hover:text-white;
-  }
-
-  .text-accent {
-    @apply text-[#ff014f];
-  }
-
-  .title-main {
-    @apply text-white font-bold tracking-tight;
-  }
-  .inbio-input{
-    background-color: #191b1e;
-    box-shadow: inset 8px 8px 16px #15171a, inset -8px -8px 16px #1d1f22;
-    outline: none
   
+  .text-gradient {
+    background: linear-gradient(135deg, #3498DB 0%, #FCEE21 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .btn-primary {
+    @apply bg-machina-brand text-machina-brand-text px-8 py-4 rounded-lg font-semibold text-lg 
+           hover:brightness-110 transition-all shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-machina-accent hover:brightness-110 text-white px-8 py-4 rounded-lg font-semibold text-lg 
+           transition-all shadow-lg hover:shadow-xl;
+  }
+  
+  .section-padding {
+    @apply py-20;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 md:px-16;
   }
 }
 

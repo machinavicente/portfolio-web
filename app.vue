@@ -1,13 +1,29 @@
 <template>
-  <div class="min-h-screen text-justify bg-[#212428] text-white">
-    <Navbar />
-    <main class="container mx-auto px-6 md:px-16 pt-32 space-y-32">
+  <div class="min-h-screen">
+    <Header />
+    <main>
       <Hero />
-      <Skills />
-      <Features />
-      <Projects />
-      <Contact />
+      <ServiciosEspecializados />
+      <PorQueElegirnos />
+      <Proyectos />
+      <SeccionImpacto />
+
+      <Testimonios />
+      <Contacto />
+      
     </main>
     <Footer />
   </div>
 </template>
+
+<script setup>
+import Header from '~/components/Header.vue'
+import Hero from '~/components/Hero.vue'
+import ServiciosEspecializados from '~/components/ServiciosEspecializados.vue'
+import PorQueElegirnos from '~/components/PorQueElegirnos.vue'
+import Proyectos from '~/components/Proyectos.vue'
+import SeccionImpacto from '~/components/SeccionImpacto.vue'
+import Testimonios from '~/components/Testimonios.vue'
+import Contacto from '~/components/Contacto.vue'
+import Footer from '~/components/Footer.vue'
+</script>
